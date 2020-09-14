@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemies
+  - Hole
+  - Level
+  - DeathZone
+  - Bullet
+  - PostFX
+  - BulletDeathZone
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackgroundPS
+    uniqueID: 570421729
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackgroundObj
+    uniqueID: 3927530405
+    locked: 0
+  - name: Foreground_PS
+    uniqueID: 3700705827
+    locked: 0
+  - name: ForegroundObj
+    uniqueID: 2324281553
+    locked: 0
+  - name: ForegroundUI
+    uniqueID: 1431478547
+    locked: 0
