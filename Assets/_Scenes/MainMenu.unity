@@ -8373,10 +8373,12 @@ MonoBehaviour:
   moveSpeed: 5
   jumpHeight: 7
   fallMultiplier: 2.5
+  downMultiplier: 3
   knockbackForce: {x: 6, y: 4}
   knockbackDuration: 0.9
   horizontalMovement: Horizontal
   jumpMovement: Jump
+  fallMovement: Down
   particleController: {fileID: 736056902}
 --- !u!95 &736056906
 Animator:
@@ -13849,7 +13851,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877014145
 MonoBehaviour:

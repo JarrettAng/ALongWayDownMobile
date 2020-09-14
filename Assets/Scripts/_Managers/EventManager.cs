@@ -2,8 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EventManager : MonoBehaviour {
+	public class UnityFloatEvent : UnityEvent<float> { };
+
 	public static Action OnPlatformPass;
 	public static Action<GameObject> OnPlayerHit;
     public static Action<int> OnPlayerScore;
@@ -13,6 +16,11 @@ public class EventManager : MonoBehaviour {
     public static Action<GameObject> OnObjectTeleport;
 
 	public static Action OnGameOver;
+
+	// UI Control Events
+	public static UnityFloatEvent HorizontalInput = new UnityFloatEvent();
+	public static UnityFloatEvent JumpInput = new UnityFloatEvent();
+	public static UnityFloatEvent FallInput = new UnityFloatEvent();
 
 	private void OnDisable() {
 		ClearAllEvents();

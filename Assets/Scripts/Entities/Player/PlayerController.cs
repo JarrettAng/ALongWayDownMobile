@@ -14,13 +14,13 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField, Tooltip("How much knockback to apply to the player when hit.")] private Vector2 knockbackForce;
 	[SerializeField, Tooltip("How long till the player can control his character after knockback.")] private float knockbackDuration = 1f;
 
-	[Header("Movement controls")] // Used to prevent hardcoding of keys (Use ProjectSettings > Input to change/set more keys of type)
-	[SerializeField, Tooltip("Axes for left / right movement")] private string horizontalMovement = "Horizontal";
-	[SerializeField, Tooltip("Axes for left / right movement")] private string jumpMovement = "Jump";
-	[SerializeField, Tooltip("Axes for left / right movement")] private string fallMovement = "Down";
-
 	[Header("Controllers reference")]
 	[SerializeField] private ParticleController particleController;
+
+	[Header("Read-Only")]
+	[SerializeField] private float horizontalDirection;
+	[SerializeField] private float jumpDirection;
+	[SerializeField] private float fallDirection;
 
 	private Rigidbody2D rb2d;
 	private Animator anim;
@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour {
         gravity = Physics2D.gravity.y;
 
         EventManager.OnPlayerHit += HandlePlayerHit;
+		EventManager.HorizontalInput.AddListener(SetHorizontalDirection);
+		EventManager.JumpInput.AddListener(SetJumpDirection);
+		EventManager.FallInput.AddListener(SetFallDirection);
 	}
 
 	private void Update() {
@@ -59,8 +62,20 @@ public class PlayerController : MonoBehaviour {
         HandleMovement();
 	}
 
+	public void SetHorizontalDirection(float dir) {
+		horizontalDirection = dir;
+    }
+
+	public void SetJumpDirection(float dir) {
+		jumpDirection = dir;
+	}
+
+	public void SetFallDirection(float dir) {
+		fallDirection = dir;
+	}
+
 	private void HandleJump() {
-		if(Input.GetAxis(jumpMovement) > 0 && canJump) {
+		if(jumpDirection > 0 && canJump) {
 			// The player's y velocity should reset on jump (so jump height is constant no matter the current velocity)
 			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpHeight);
 
@@ -74,8 +89,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void HandleMovement() {
-
-		float direction = Input.GetAxisRaw(horizontalMovement);
+		float direction = horizontalDirection;
 		rb2d.velocity = new Vector2(direction * moveSpeed, rb2d.velocity.y);
 
 		if(direction < 0) {
@@ -105,7 +119,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void HandleRealisticFall() {
         // If player is falling, make player fall faster over time.
-        if(Input.GetAxis(fallMovement) > 0) {
+        if(fallDirection > 0) {
             rb2d.velocity += Vector2.up * gravity * (fallMultiplier * downMultiplier - 1) * Time.deltaTime;
         } else if(rb2d.velocity.y < 0) {
             rb2d.velocity += Vector2.up * gravity * (fallMultiplier - 1) * Time.deltaTime;
