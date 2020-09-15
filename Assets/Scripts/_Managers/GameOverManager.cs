@@ -9,6 +9,7 @@ public class GameOverManager : MonoBehaviour {
     [SerializeField] private GameObject restartListener;
 
 	[SerializeField] private GameObject gameOverCanvas;
+	[SerializeField] private GameObject controlCanvas;
 	[SerializeField] private GameObject gameOverHighscoreEffect;
 
 	[SerializeField] private GameObject newHighscoreTxt;
@@ -27,6 +28,7 @@ public class GameOverManager : MonoBehaviour {
 
     private void GameOver() {
         restartListener.SetActive(false);
+        controlCanvas.SetActive(false);
 
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;

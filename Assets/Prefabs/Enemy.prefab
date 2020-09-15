@@ -145,7 +145,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: beecde5759f70784eabea1c056bcb15d, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -274,4 +274,3 @@ MonoBehaviour:
     type: 3}
   addScorePopUp: {fileID: 1553293877038537521, guid: c6c4c56d82753e446b60585d1a710c80,
     type: 3}
-  scoreIncrease: 30

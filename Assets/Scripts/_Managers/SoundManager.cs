@@ -41,8 +41,4 @@ public class SoundManager : Singleton<SoundManager> {
 
         s.source.Stop();
     }
-
-    public void PlayButtonClick() {
-        PlaySound("ButtonClick");
-    }
 }
