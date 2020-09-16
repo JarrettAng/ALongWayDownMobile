@@ -46,4 +46,29 @@ public class SaveManager : Singleton<SaveManager>
             StoredPlayerData.HasPlayedBefore = false;
         }
     }
+
+    public static void SaveSoundData(SoundData data) {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream stream = new FileStream(Application.persistentDataPath + "/ALWDSoundData.dab", FileMode.Create);
+
+        bf.Serialize(stream, data);
+
+        stream.Close();
+    }
+
+    public static SoundData LoadSoundData() {
+        SoundData savedData;
+
+        if(File.Exists(Application.persistentDataPath + "/ALWDSoundData.dab")) {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream stream = new FileStream(Application.persistentDataPath + "/ALWDSoundData.dab", FileMode.Open);
+            savedData = bf.Deserialize(stream) as SoundData;
+
+            stream.Close();
+        } else {
+            savedData = new SoundData();
+        }
+
+        return savedData;
+    }
 }
