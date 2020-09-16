@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] private float hitGraceSeconds = 3f;
 
 	[Header("Controlers reference")]
-	[SerializeField] private ParticleController particleController;
+	[SerializeField] private ParticleController particleController = default;
 
 	public PostProcessVolume postfx;
 

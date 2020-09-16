@@ -17,11 +17,11 @@ public class PlatformManager : Singleton<PlatformManager>
     }
 
     [Header("Mandatory Sections")]
-    [SerializeField, Tooltip("Exit section type")] private GameObject exitSection;
+    [SerializeField, Tooltip("Exit section type")] private GameObject exitSection = default;
 
     [Header("Other Sections")]
-    [SerializeField] private LevelPack levelPack;
-    [SerializeField] private LevelPack mandatoryLevelPack;
+    [SerializeField] private LevelPack levelPack = default;
+    [SerializeField] private LevelPack mandatoryLevelPack = default;
 
     [Header("Section Spawnpoints")]
     // Sections centers are at 1/4, 2/4, 3/4 of screen length

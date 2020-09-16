@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeadEnemyShoot : MonoBehaviour
 {
     [Header("Shooting Attributes")]
-    [SerializeField] private DeadBullet bullet;
+    [SerializeField] private DeadBullet bullet = default;
     [SerializeField, Tooltip("Time between shots")] private float cooldown = 1f;
     [SerializeField, Tooltip("How long before the first shot takes?")] private float initialCooldown = 1f;
 

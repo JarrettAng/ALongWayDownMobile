@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyDestroyHandler : MonoBehaviour {
 
-	[SerializeField, Tooltip("How much bounce does the player get when jumping on this enemy.")] private float bounceAmount;
-	[SerializeField, Tooltip("Enemy that spawns on death")] private GameObject deadEnemy;
+	[SerializeField, Tooltip("How much bounce does the player get when jumping on this enemy.")] private float bounceAmount = default;
+	[SerializeField, Tooltip("Enemy that spawns on death")] private GameObject deadEnemy = default;
 
-	[SerializeField] private ScorePopUp addScorePopUp;
+	[SerializeField] private ScorePopUp addScorePopUp = default;
 
     private GameManager gameManager;
 

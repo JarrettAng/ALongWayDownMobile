@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TurretShoot : MonoBehaviour
 {
-    [SerializeField] private Bullet bullet;
-    [SerializeField] private Transform player;
+    [SerializeField] private Bullet bullet = default;
+    [SerializeField] private Transform player = default;
 
     [Header("Shooting Attributes")]
     [SerializeField, Tooltip("Maximum y-distance from player before starting to shoot")] private float yMaxTolerance = 5f;
     [SerializeField, Tooltip("Maximum y-distance from player before starting to shoot")] private float yMinTolerance = -13f;
-    [SerializeField, Tooltip("Maximum x-distance from player before starting to shoot")] private float xMinTolerance = 2f;
+    // [SerializeField, Tooltip("Maximum x-distance from player before starting to shoot")] private float xMinTolerance = 2f;
 
     [SerializeField, Tooltip("Time between shots")] private float cooldown = 3f;
     [SerializeField, Tooltip("Time between checks if player in range")] private float checkCooldown = 1.2f;

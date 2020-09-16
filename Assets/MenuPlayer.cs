@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuPlayer : MonoBehaviour {
-	[SerializeField] private ParticleController particleController;
+	[SerializeField] private ParticleController particleController = default;
 
     [Header("Outcomes")]
     [SerializeField] private bool doNothing = false;
 
     [Header("Respawn")]
     [SerializeField] private bool respawnAfterHit = false;
-    [SerializeField] private Transform respawnPoint;
+    [SerializeField] private Transform respawnPoint = default;
 
     [Header("Scene Swap")]
     [SerializeField] private bool switchSceneAfterHit = false;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager> {
 
-    [SerializeField] private Sound[] sounds;
+    [SerializeField] private Sound[] sounds = default;
 
     private void Awake() {
         if(Instance != this) {

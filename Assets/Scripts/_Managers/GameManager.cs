@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : Singleton<GameManager> {
-	[SerializeField] private TextMeshProUGUI scoreTxt;
-	[SerializeField] private Animator scoreAnim;
+	[SerializeField] private TextMeshProUGUI scoreTxt = default;
+	[SerializeField] private Animator scoreAnim = default;
 
 	[SerializeField, Tooltip("What music should play")] private string musicToPlay = "GameMusic";
 	[SerializeField, Tooltip("What music should play")] private bool stopPlayingLastMusic = true;
@@ -22,8 +22,6 @@ public class GameManager : Singleton<GameManager> {
 	private static int highscore;
 
 	private SoundManager soundManager;
-
-	private bool gameOver = false;
 
 	#region Properties
 

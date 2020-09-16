@@ -17,13 +17,17 @@ public class Particles {
 }
 
 public class ParticleController : MonoBehaviour {
-	[SerializeField] private Particles[] particles;
+	[SerializeField] private Particles[] particles = default;
+
+	private ParticleSystem.EmissionModule[] particlesEM;
 
 	private Dictionary<ParticleType, ParticleSystem> particleInstantiatedDict = new Dictionary<ParticleType, ParticleSystem>();
+	private Dictionary<ParticleType, ParticleSystem.EmissionModule> particleEmissionDict = new Dictionary<ParticleType, ParticleSystem.EmissionModule>();
 
-	private void Start() {
+    private void Awake() {
 		InitializeParticles();
 	}
+
 
 	private void InitializeParticles() {
 		foreach(Particles particle in particles) {
@@ -33,29 +37,24 @@ public class ParticleController : MonoBehaviour {
 				break;
 			}
 
+			particleEmissionDict.Add(particle.particleType, particle.PS.emission);
+
 			if(particle.EmitOnAwake) {
-				particle.PS.enableEmission = true;
+				ToggleParticleSystem(particle.particleType, true);
 			} else {
-				particle.PS.enableEmission = false;
+				ToggleParticleSystem(particle.particleType, false);
 			}
 		}
 	}
 
 	public void ToggleEmitOnAllParticles(bool state) {
 		foreach(Particles particle in particles) {
-			particle.PS.enableEmission = state;
+			ToggleParticleSystem(particle.particleType, state);
 		}
 	}
 
 	public void ToggleEmitOnThisParticle(ParticleType type, bool state) {
-		foreach(Particles particle in particles) {
-			if(particle.particleType == type) {
-				particle.PS.enableEmission = state;
-				return;
-			} else {
-				Debug.Log("The particle of this type: " + type.ToString() + " does not exist on this object: " + gameObject.name);
-			}
-		}
+		ToggleParticleSystem(type, state);
 	}
 
 	public void InstantiateParticleOfType(ParticleType type, Vector2 pos) {
@@ -65,5 +64,14 @@ public class ParticleController : MonoBehaviour {
 		}
 
 		Debug.Log("The particle of this type: " + type.ToString() + " is not assigned on this object's ParticleController: " + gameObject.name);
+	}
+
+	private void ToggleParticleSystem(ParticleType particleType, bool state) {
+		if(!particleEmissionDict.TryGetValue(particleType, out ParticleSystem.EmissionModule em)) {
+			Debug.LogErrorFormat("The particle of this type: {0} does not exist on this object: {1}", particleType, gameObject.name);
+			return;
+        }
+
+		em.enabled = state;
 	}
 }

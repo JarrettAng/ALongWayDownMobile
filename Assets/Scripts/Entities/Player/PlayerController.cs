@@ -11,11 +11,11 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField, Tooltip("How much should the falling multiplier increase by on down press")] private float downMultiplier = 3f;
 
 	[Header("Interaction attributes")]
-	[SerializeField, Tooltip("How much knockback to apply to the player when hit.")] private Vector2 knockbackForce;
+	[SerializeField, Tooltip("How much knockback to apply to the player when hit.")] private Vector2 knockbackForce = default;
 	[SerializeField, Tooltip("How long till the player can control his character after knockback.")] private float knockbackDuration = 1f;
 
 	[Header("Controllers reference")]
-	[SerializeField] private ParticleController particleController;
+	[SerializeField] private ParticleController particleController = default;
 
 	[Header("Read-Only")]
 	[SerializeField] private float horizontalDirection;

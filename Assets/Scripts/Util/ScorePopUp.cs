@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class ScorePopUp : MonoBehaviour {
-	[SerializeField] private TextMeshProUGUI scoreTxt;
+	[SerializeField] private TextMeshProUGUI scoreTxt = default;
 
     [SerializeField] private float deleteAfterSeconds = 2f;
 

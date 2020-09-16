@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthUI : Singleton<HealthUI> {
-	[SerializeField, Tooltip("Sprites for health.")] private Sprite fullHeart, emptyHeart;
-	[SerializeField, Tooltip("Image elements for the player's health.")] private Image[] hearts;
+	[SerializeField, Tooltip("Sprite for a health.")] private Sprite fullHeart = default;
+	[SerializeField, Tooltip("Sprites for a empty health.")] private Sprite emptyHeart = default;
+	[SerializeField, Tooltip("Image elements for the player's health.")] private Image[] hearts = default;
 
 	public void UpdateUIHeart(int currentHealth) {
 		// Go through all the heart images

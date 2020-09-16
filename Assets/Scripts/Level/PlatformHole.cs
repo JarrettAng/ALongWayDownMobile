@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformHole : MonoBehaviour {
-	[SerializeField, Tooltip("The walls around the hole (Minimum: 2)")] private GameObject[] walls;
-	[SerializeField] private ScorePopUp addScorePopUp;
+	[SerializeField, Tooltip("The walls around the hole (Minimum: 2)")] private GameObject[] walls = default;
+	[SerializeField] private ScorePopUp addScorePopUp = default;
 
     private GameManager gameManager;
 

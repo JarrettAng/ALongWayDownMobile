@@ -11,10 +11,10 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private string tutorialScene = "Tutorial";
 
     [Header("Scene objects")]
-    [SerializeField] private GameObject mainPanel;
-    [SerializeField] private GameObject creditsPanel;
-    [SerializeField] private GameObject firstPlayPanel;
-    [SerializeField] private Button quitButton;
+    [SerializeField] private GameObject mainPanel = default;
+    [SerializeField] private GameObject creditsPanel = default;
+    [SerializeField] private GameObject firstPlayPanel = default;
+    [SerializeField] private Button quitButton = default;
 
     private bool firstPlay = false;
 

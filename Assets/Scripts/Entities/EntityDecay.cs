@@ -9,7 +9,7 @@ public class EntityDecay : MonoBehaviour
     [SerializeField] private float decayTime = 2f;
     [SerializeField] private float deathTime = 2f;
 
-    [SerializeField] private ParticleSystem ps;
+    [SerializeField] private ParticleSystem ps = default;
 
     private void Start() {
         StartCoroutine(DecayEntity());

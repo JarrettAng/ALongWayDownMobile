@@ -9,7 +9,7 @@ public class RestartListener : MonoBehaviour
     [SerializeField] private KeyCode restartKeyCode = KeyCode.R;
     [SerializeField] private float secondsBeforeCancel = 3f;
 
-    [SerializeField] private TextMeshProUGUI restartConfirmationText;
+    [SerializeField] private TextMeshProUGUI restartConfirmationText = default;
 
     private bool confirmationShown = false;
 
@@ -18,7 +18,7 @@ public class RestartListener : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.R)) {
+        if(Input.GetKeyDown(restartKeyCode)) {
             if(confirmationShown) {
                 RestartGame();
             } else {

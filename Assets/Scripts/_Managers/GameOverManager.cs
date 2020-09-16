@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameOverManager : MonoBehaviour {
-    [SerializeField] private GameObject restartListener;
+    [SerializeField] private GameObject restartListener = default;
 
-	[SerializeField] private GameObject gameOverCanvas;
-	[SerializeField] private GameObject controlCanvas;
-	[SerializeField] private GameObject gameOverHighscoreEffect;
+	[SerializeField] private GameObject gameOverCanvas = default;
+	[SerializeField] private GameObject controlCanvas = default;
+	[SerializeField] private GameObject gameOverHighscoreEffect = default;
 
-	[SerializeField] private GameObject newHighscoreTxt;
+	[SerializeField] private GameObject newHighscoreTxt = default;
 
-	[SerializeField] private TextMeshProUGUI scoreTxt;
-	[SerializeField] private TextMeshProUGUI highscoreTxt;
-	[SerializeField] private Animator scoreTxtAnim;
+	[SerializeField] private TextMeshProUGUI scoreTxt = default;
+	[SerializeField] private TextMeshProUGUI highscoreTxt = default;
+	[SerializeField] private Animator scoreTxtAnim = default;
 
 	private SoundManager soundManager;
 

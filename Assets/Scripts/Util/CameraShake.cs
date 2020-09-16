@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraShake : Singleton<CameraShake> {
 	[Header("Shake properties")]
-	[SerializeField, Tooltip("How long should the shake last for?")] private float shakeDuration;
-	[SerializeField, Tooltip("How strong is the shake?")] private float shakeAmount;
+	[SerializeField, Tooltip("How long should the shake last for?")] private float shakeDuration = default;
+	[SerializeField, Tooltip("How strong is the shake?")] private float shakeAmount = default;
 
 	private Vector3 currentPos;
 

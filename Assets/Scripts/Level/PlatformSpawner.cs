@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     [Header("Platform To Spawn")]
-    [SerializeField, Tooltip("The platform that should spawn")] private Platform platform;
+    [SerializeField, Tooltip("The platform that should spawn")] private Platform platform = default;
 
     [Header("Spawning Attributes")]
-    [SerializeField, Tooltip("Types of platform")] private PlatformType[] platformTypes;
+    [SerializeField, Tooltip("Types of platform")] private PlatformType[] platformTypes = default;
     [SerializeField, Tooltip("How many platforms to spawn at the start?")] private int numberToSpawn = 3;
     [SerializeField, Tooltip("The height spacing between platforms")] private float gapBetweenPlatforms = 6f;
 

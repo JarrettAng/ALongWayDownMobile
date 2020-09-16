@@ -9,8 +9,8 @@ public class Platform : MonoBehaviour
     [Header("Platform Attrivbutes")]
     [SerializeField, Tooltip("How big is the hole?")] private float holeSize = 4f;
 
-    [SerializeField, Tooltip("Platform left of hole")] private GameObject leftPlatform;
-    [SerializeField, Tooltip("Platform right of hole")] private GameObject rightPlatform;
+    [SerializeField, Tooltip("Platform left of hole")] private GameObject leftPlatform = default;
+    [SerializeField, Tooltip("Platform right of hole")] private GameObject rightPlatform = default;
 
     private PlatformManager platformManager;
     private Vector2 sectionSpawnPos;

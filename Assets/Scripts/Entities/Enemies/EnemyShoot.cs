@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    [SerializeField] private Bullet bullet;
-    [SerializeField] private Transform player;
+    [SerializeField] private Bullet bullet = default;
+    [SerializeField] private Transform player = default;
 
     [Header("Shooting Attributes")]
     [SerializeField, Tooltip("Maximum y-distance from player before starting to shoot")] private float yMaxTolerance = 5f;
