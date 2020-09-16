@@ -25,8 +25,8 @@ public class PauseController : MonoBehaviour
     }
 
     public void CloseSettings() {
-        ToggleButtonsPanel(false);
-        ToggleSettingsPanel(true);
+        ToggleButtonsPanel(true);
+        ToggleSettingsPanel(false);
     }
 
     private void ToggleButtonsPanel(bool state) {

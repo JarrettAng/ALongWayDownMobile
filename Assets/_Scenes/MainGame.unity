@@ -19098,11 +19098,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7423194776016397399, guid: beef05370852162488e30cc3ab46de90,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1797000147}
     - target: {fileID: 7423194776298377507, guid: beef05370852162488e30cc3ab46de90,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -19251,6 +19246,11 @@ PrefabInstance:
     - target: {fileID: 6511228677851680490, guid: beef05370852162488e30cc3ab46de90,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6511228677851680490, guid: beef05370852162488e30cc3ab46de90,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
