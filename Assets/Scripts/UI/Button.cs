@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public void PlayButtonClick() {
+    public virtual void PlayButtonClick() {
         SoundManager.Instance.PlaySound("ButtonClick");
     }
 }

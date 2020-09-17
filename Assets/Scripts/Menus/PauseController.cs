@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour
 {
@@ -17,6 +18,16 @@ public class PauseController : MonoBehaviour
         pauseMenu.SetActive(state);
 
         Time.timeScale = (state == true) ?  0 : 1;
+    }
+
+    public void Retry() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Menu() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void OpenSettings() {

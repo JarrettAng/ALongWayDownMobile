@@ -49,7 +49,7 @@ MonoBehaviour:
     audioMixerGroup: {fileID: -4678085504601748402, guid: 274201ec170effc42bef89526b96a534,
       type: 2}
     clip: {fileID: 8300000, guid: 81e495158fd74f1418a31aff7d96a66a, type: 3}
-    volume: 0.75
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
     audioMixerGroup: {fileID: -4678085504601748402, guid: 274201ec170effc42bef89526b96a534,
       type: 2}
     clip: {fileID: 8300000, guid: 44ad9a208116a674c857a0e9e08fedc7, type: 3}
-    volume: 0.3
+    volume: 0.35
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
     audioMixerGroup: {fileID: -4678085504601748402, guid: 274201ec170effc42bef89526b96a534,
       type: 2}
     clip: {fileID: 8300000, guid: 4178d101fb92039449cf83cdc53e4073, type: 3}
-    volume: 0.6
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -133,3 +133,14 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: MovementButtonClick
+    audioMixerGroup: {fileID: -4678085504601748402, guid: 274201ec170effc42bef89526b96a534,
+      type: 2}
+    clip: {fileID: 8300000, guid: e1f65f0cf1a45ca40a5a371d819a97d8, type: 3}
+    volume: 0.4
+    pitch: 0.4
+    loop: 0
+    source: {fileID: 0}
+  storedData:
+    MusicVolume: 0.5
+    SfxVolume: 0.5

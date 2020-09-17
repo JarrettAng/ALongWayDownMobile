@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6770347359275912431}
   - component: {fileID: 4443344662734160855}
   - component: {fileID: 9164162279635324321}
-  - component: {fileID: 7379275600061140519}
+  - component: {fileID: 3177023715020998739}
   m_Layer: 0
   m_Name: FallButton
   m_TagString: Untagged
@@ -153,7 +153,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 7379275600061140519}
+        - m_Target: {fileID: 3177023715020998739}
           m_MethodName: PlayButtonClick
           m_Mode: 1
           m_Arguments:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0505c574d96d1cf458990084fb4dcca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7379275600061140519
+--- !u!114 &3177023715020998739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2588593649250713628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eebdd58c269489429ce514016913279, type: 3}
+  m_Script: {fileID: 11500000, guid: 538406e0e661b13459c14689f99865d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2588593650112554607
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 8708507968915065733}
   - component: {fileID: 401024742770956184}
   - component: {fileID: 5314971092789324292}
-  - component: {fileID: 9120350345726454782}
+  - component: {fileID: 6153858809209735791}
   m_Layer: 0
   m_Name: MoveRightButton
   m_TagString: Untagged
@@ -379,7 +379,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 9120350345726454782}
+        - m_Target: {fileID: 6153858809209735791}
           m_MethodName: PlayButtonClick
           m_Mode: 1
           m_Arguments:
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0505c574d96d1cf458990084fb4dcca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9120350345726454782
+--- !u!114 &6153858809209735791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2588593650112554607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eebdd58c269489429ce514016913279, type: 3}
+  m_Script: {fileID: 11500000, guid: 538406e0e661b13459c14689f99865d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2588593650380462558
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 1895101572557461897}
   - component: {fileID: 7171477474091863946}
   - component: {fileID: 4273192948400787888}
-  - component: {fileID: 5004186273804084183}
+  - component: {fileID: 8199388138109330112}
   m_Layer: 0
   m_Name: JumpButton
   m_TagString: Untagged
@@ -757,7 +757,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 5004186273804084183}
+        - m_Target: {fileID: 8199388138109330112}
           m_MethodName: PlayButtonClick
           m_Mode: 1
           m_Arguments:
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0505c574d96d1cf458990084fb4dcca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5004186273804084183
+--- !u!114 &8199388138109330112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2588593651044250518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eebdd58c269489429ce514016913279, type: 3}
+  m_Script: {fileID: 11500000, guid: 538406e0e661b13459c14689f99865d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2588593651169394620
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 5330665893133520783}
   - component: {fileID: 1171248026025669047}
   - component: {fileID: 8064741034892125855}
-  - component: {fileID: 262297023562135903}
+  - component: {fileID: 1596851114865066511}
   m_Layer: 0
   m_Name: MoveLeftButton
   m_TagString: Untagged
@@ -983,7 +983,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 262297023562135903}
+        - m_Target: {fileID: 1596851114865066511}
           m_MethodName: PlayButtonClick
           m_Mode: 1
           m_Arguments:
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0505c574d96d1cf458990084fb4dcca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &262297023562135903
+--- !u!114 &1596851114865066511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2588593651169394620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eebdd58c269489429ce514016913279, type: 3}
+  m_Script: {fileID: 11500000, guid: 538406e0e661b13459c14689f99865d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2588593651204842877

@@ -12,17 +12,13 @@ public class MainMenuController : MonoBehaviour
 
     [Header("Scene objects")]
     [SerializeField] private GameObject mainPanel = default;
+    [SerializeField] private GameObject settingsPanel = default;
     [SerializeField] private GameObject creditsPanel = default;
     [SerializeField] private GameObject firstPlayPanel = default;
-    [SerializeField] private Button quitButton = default;
 
     private bool firstPlay = false;
 
     private void Start() {
-        if(Application.platform == RuntimePlatform.WebGLPlayer) {
-            quitButton.gameObject.SetActive(false);
-        }
-
         firstPlay = !SaveManager.StoredPlayerData.HasPlayedBefore;
 
         ToggleCredits(false);
@@ -45,6 +41,16 @@ public class MainMenuController : MonoBehaviour
     public void PlayTutorial() {
         firstPlay = false;
         SceneManager.LoadScene(tutorialScene);
+    }
+
+    public void ToggleSettings(bool state) {
+        if(state) {
+            mainPanel.SetActive(false);
+            settingsPanel.SetActive(true);
+        } else {
+            mainPanel.SetActive(true);
+            settingsPanel.SetActive(false);
+        }
     }
 
     public void ToggleCredits(bool state) {

@@ -27,6 +27,8 @@ public class GameOverManager : MonoBehaviour {
 	}
 
     private void GameOver() {
+        Debug.Log("Ran");
+
         restartListener.SetActive(false);
         controlCanvas.SetActive(false);
 
@@ -106,7 +108,7 @@ public class GameOverManager : MonoBehaviour {
 
 	public void Retry() {
 		Time.timeScale = 1;
-		SceneManager.LoadScene("MainGame");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void Menu() {

@@ -9,6 +9,10 @@ public class ControlsKeyboard : MonoBehaviour
     [SerializeField, Tooltip("Axes for jump movement")] private string jumpMovement = "Jump";
     [SerializeField, Tooltip("Axes for fall movement")] private string fallMovement = "Down";
 
+    private void Awake() {
+        if(!Application.isEditor) enabled = false;
+    }
+
     private void Update() {
         if(Input.GetKey(KeyCode.Mouse0) || Input.touchCount > 0) return;
 
