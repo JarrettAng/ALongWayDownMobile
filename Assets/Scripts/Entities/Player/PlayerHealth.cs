@@ -6,11 +6,15 @@ using UnityEngine.Rendering.PostProcessing;
 public class PlayerHealth : MonoBehaviour {
 	[Header("Player's information")]
 	[SerializeField, Tooltip("Max HP of player")] private int maxHealth = 3;
-	[Tooltip("Current HP of player")] private int health = 3;
-
     [SerializeField] private float hitGraceSeconds = 3f;
 
-	[Header("Controlers reference")]
+    [Header("Attributes")]
+    [SerializeField] private float defaultChromaticAberrationIntensity = 0.25f;
+
+    [Header("Read-Only")]
+    [SerializeField, Tooltip("Current HP of player")] private int health = 3;
+
+    [Header("Controlers reference")]
 	[SerializeField] private ParticleController particleController = default;
 
 	public PostProcessVolume postfx;
@@ -29,7 +33,9 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	private void Start() {
-		health = maxHealth;
+        ResetHitPostFX();
+
+        health = maxHealth;
 		HealthUI.Instance.UpdateUIHeart(health);
 	}
 
@@ -90,8 +96,6 @@ public class PlayerHealth : MonoBehaviour {
 
         float progress = .25f;
 
-        float temp;
-        temp = ca.intensity.value;
         while(progress < 1f) {
 
             ca.intensity.value = progress;
@@ -104,8 +108,6 @@ public class PlayerHealth : MonoBehaviour {
 
         float fprogress = 1f;
 
-        float ftemp;
-        ftemp = ca.intensity.value;
         while(fprogress > .25f) {
 
             ca.intensity.value = progress;
@@ -115,9 +117,14 @@ public class PlayerHealth : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
 
-        ftemp = .25f;
-        ca.intensity.value = ftemp;
+        ResetHitPostFX();
 
         yield return null;
+    }
+
+    private void ResetHitPostFX() {
+        postfx.sharedProfile.TryGetSettings(out ChromaticAberration ca);
+
+        ca.intensity.value = defaultChromaticAberrationIntensity;
     }
 }
