@@ -4381,7 +4381,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10942,6 +10942,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588593651204842865, guid: ebaf495182a09a54a8793bbe363ca39b,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 2588593651204842865, guid: ebaf495182a09a54a8793bbe363ca39b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1431478547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebaf495182a09a54a8793bbe363ca39b, type: 3}
@@ -17613,6 +17623,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423194775319168216, guid: beef05370852162488e30cc3ab46de90,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 7423194775319168216, guid: beef05370852162488e30cc3ab46de90,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1431478547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beef05370852162488e30cc3ab46de90, type: 3}
@@ -26104,6 +26124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 99999
   hitGraceSeconds: 3
+  defaultChromaticAberrationIntensity: 0.25
+  health: 3
   particleController: {fileID: 8718265128761544012}
   postfx: {fileID: 165458403}
 --- !u!114 &8718265128761544003
