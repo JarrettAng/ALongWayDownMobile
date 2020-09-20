@@ -27,8 +27,6 @@ public class GameOverManager : MonoBehaviour {
 	}
 
     private void GameOver() {
-        Debug.Log("Ran");
-
         restartListener.SetActive(false);
         controlCanvas.SetActive(false);
 

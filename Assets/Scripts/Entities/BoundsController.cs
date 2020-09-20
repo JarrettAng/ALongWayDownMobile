@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoundsController : MonoBehaviour {
-	private static float leftExtent = 0;
-	private static float rightExtent = 0;
+	private float leftExtent = 0;
+	private float rightExtent = 0;
 
 	[SerializeField, Tooltip("How far in should the player move to center on teleport? (Prevents infinite teleporting)")] private float teleportOffset = 0.1f;
 
-	private void Awake() {
-		if(leftExtent == 0) {
-			float horizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
-			leftExtent = Camera.main.transform.position.x - horizontalExtent;
-		}
-		if(rightExtent == 0) {
-			float horizontalExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
-			rightExtent = Camera.main.transform.position.x + horizontalExtent;
-		}
-	}
+    private void Awake() {
+		leftExtent = BoundsManager.Instance.LeftExtent;
+		rightExtent = BoundsManager.Instance.RightExtent;
+    }
 
-	private void Update() {
+    private void Update() {
 		if(!IsWithinBounds()) {
 			Teleport();
 		}

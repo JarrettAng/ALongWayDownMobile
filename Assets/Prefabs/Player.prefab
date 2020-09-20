@@ -129,7 +129,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -166,14 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ba2f4de62a3684f933bec0a0efc840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpHeight: 7
+  moveSpeed: 6
+  jumpHeight: 9
   fallMultiplier: 2.5
-  knockbackForce: {x: 5, y: 5}
-  knockbackDuration: 1
-  horizontalMovement: Horizontal
-  jumpMovement: Jump
+  downMultiplier: 3
+  knockbackForce: {x: 6, y: 4}
+  knockbackDuration: 0.9
   particleController: {fileID: 8718265127945395905}
+  horizontalDirection: 0
+  jumpDirection: 0
+  fallDirection: 0
 --- !u!114 &8718265127945395919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  hitGraceSeconds: 3
+  defaultChromaticAberrationIntensity: 0.25
+  health: 3
   particleController: {fileID: 8718265127945395905}
+  postfx: {fileID: 0}
 --- !u!114 &8718265127945395904
 MonoBehaviour:
   m_ObjectHideFlags: 0
