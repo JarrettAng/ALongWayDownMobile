@@ -517,5 +517,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1021236238632591396, guid: 5611dafe16536124e8ce31efa79ae6b8, type: 3}
-  cooldown: 1
-  initialCooldown: 1
+  cooldown: 1.25
+  initialCooldown: 2
