@@ -2007,11 +2007,11 @@ RectTransform:
   - {fileID: 2140625502}
   - {fileID: 1839243627}
   - {fileID: 1214630714}
+  - {fileID: 410593174}
   - {fileID: 570396159}
   - {fileID: 728208173}
   - {fileID: 411328167}
   - {fileID: 1371689307}
-  - {fileID: 410593174}
   m_Father: {fileID: 805794394}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3978,7 +3978,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185918652}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4007,9 +4007,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'WALLS & FLOORS
 
-    <size=50%>Enemies can see through walls
+    <size=50%>Enemies can see you through walls.
 
-    Bullets can pass through walls and floors</size>'
+    Bullets can pass through walls and floors.</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afaed7869eeef854383e1f9da3ac708d, type: 2}
   m_sharedMaterial: {fileID: 8073745792569266813, guid: afaed7869eeef854383e1f9da3ac708d,
@@ -4079,10 +4079,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 410593175}
-    characterCount: 86
+    characterCount: 92
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 14
+    spaceCount: 15
+    wordCount: 15
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -4140,7 +4140,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185918652}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5365,7 +5365,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185918652}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6873,7 +6873,7 @@ GameObject:
   - component: {fileID: 728208175}
   - component: {fileID: 728208174}
   m_Layer: 0
-  m_Name: WarningInfoTurret
+  m_Name: TurretWarningInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6891,7 +6891,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185918652}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6920,7 +6920,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Turret Above!
 
-    <size=50%> Only shoots once your below it.
+    <size=50%> Only shoots if you''re on the same level as it.
 
     You <color=red>cannot kill them</color>.
 
@@ -6994,10 +6994,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 728208174}
-    characterCount: 111
+    characterCount: 126
     spriteCount: 0
-    spaceCount: 21
-    wordCount: 21
+    spaceCount: 25
+    wordCount: 25
     linkCount: 0
     lineCount: 4
     pageCount: 1
@@ -9433,7 +9433,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'This is you.
 
-    <size=60%>Move by sliding the left joystick.</size>'
+    <size=60%>Move by sliding the left joystick left and right.</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afaed7869eeef854383e1f9da3ac708d, type: 2}
   m_sharedMaterial: {fileID: 8073745792569266813, guid: afaed7869eeef854383e1f9da3ac708d,
@@ -9503,10 +9503,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1029473825}
-    characterCount: 47
+    characterCount: 62
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 11
+    wordCount: 12
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -11222,7 +11222,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'LEVEL CLEAR!
 
-    <size=50%>Clearing levels will give you points as well</size>'
+    <size=50%>Clearing levels will give you points as well.</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afaed7869eeef854383e1f9da3ac708d, type: 2}
   m_sharedMaterial: {fileID: 8073745792569266813, guid: afaed7869eeef854383e1f9da3ac708d,
@@ -11292,7 +11292,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1214630715}
-    characterCount: 57
+    characterCount: 58
     spriteCount: 0
     spaceCount: 9
     wordCount: 10
@@ -13213,7 +13213,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185918652}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

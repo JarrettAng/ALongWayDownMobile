@@ -124,7 +124,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: '<size=50%>What goes around comes around,
 
-    Dead enemies will shoot you from above after 4 levels.</size>'
+    Dead enemies will shoot you from above after going down 3 levels.</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: afaed7869eeef854383e1f9da3ac708d, type: 2}
   m_sharedMaterial: {fileID: 8073745792569266813, guid: afaed7869eeef854383e1f9da3ac708d,
@@ -194,10 +194,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6764309178099904795}
-    characterCount: 85
+    characterCount: 96
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 15
+    spaceCount: 16
+    wordCount: 17
     linkCount: 0
     lineCount: 2
     pageCount: 1
