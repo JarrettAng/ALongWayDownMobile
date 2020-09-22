@@ -5,8 +5,8 @@ using UnityEngine;
 public class ControlsJoystick : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private FixedJoystick movementJoystick = default;
-    [SerializeField] private FixedJoystick actionJoystick = default;
+    [SerializeField] private Joystick movementJoystick = default;
+    [SerializeField] private Joystick actionJoystick = default;
 
     [Header("Read-Only")]
     [SerializeField] private float currentXAxis;
